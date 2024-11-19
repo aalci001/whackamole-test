@@ -7,19 +7,18 @@ BOARD_ROWS = 16
 BOARD_COLS = 20
 width = 640
 height = 512
-space = 0
 
 
 mole_image = pygame.image.load("mole.png")
 m_rect = mole_image.get_rect()
 
 def mole():
-    x = random.randint(0, width - BOARD_ROWS // size)
-    y = random.randint(0, height - BOARD_COLS // size)
+    x = random.randint(0, width - m_rect.width)
+    y = random.randint(0, height - m_rect.height)
     m_rect.topleft = (x,y)
 
-m_rect.x = random.randint(0, width -  BOARD_COLS // size)
-m_rect.y = random.randint(0, height - BOARD_ROWS // size)
+m_rect.x = random.randint(0, width -  m_rect.width)
+m_rect.y = random.randint(0, height - m_rect.height)
 def draw_grid():
     for i in range(1, BOARD_ROWS):
         pygame.draw.line(screen,"dark blue",(0, i * size),(width, i * size))
