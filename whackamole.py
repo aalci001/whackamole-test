@@ -9,11 +9,6 @@ width = 640
 height = 512
 space = 0
 
-def spacing(position):
-    x,y = position
-    cols = x // size
-    rows = y // size
-    return rows, cols
 
 mole_image = pygame.image.load("mole.png")
 m_rect = mole_image.get_rect()
